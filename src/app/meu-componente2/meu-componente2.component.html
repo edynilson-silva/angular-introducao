@@ -1,0 +1,99 @@
+<!-- <p *ngIf="isVisible; else condicaoFalsa"> -->
+  <!-- {{ nome.toUpperCase() }}
+  <br>
+  {{ 5 * 4 }}
+  <br> -->
+  <!-- {{ aluno?.dados?.nome }} -->
+<!-- </p> -->
+<!-- <ng-template #condicaoFalsa>
+  <p>Outro Texto</p>
+</ng-template>
+
+<div [ngSwitch]="myValue">
+  <span *ngSwitchCase="1">Valor 1</span>
+  <span *ngSwitchCase="2">Valor 2</span>
+  <span *ngSwitchCase="3">Valor 3</span>
+  <span *ngSwitchCase="">Valor Padrão</span>
+</div> -->
+
+ <!-- NGFOR -->
+
+ <!-- <ul>
+   <li *ngFor="let item of myList">Item {{ item }}</li>
+ </ul> -->
+
+ <!-- QUATRO TIPOS DE BINDING
+
+  Interpolação - Exibir um valor do componente na template (UNIDIRECIONAL)
+  PROPERTY BINDING - Valores do componente para template (para as propriedades de um elemento - Unidirecional)
+  EVENT BINDING -  Template para o componente (UNIDIRECIONAL)
+  TWO WAY DATA BINDING - Comunicação em Duas direções (BIDIRECIONAL)
+
+-->
+
+<!-- Usando Interpolação -->
+<!-- <img src="{{ img }}"> -->
+
+<!-- Ou usando colchetes na propriedade | atalho para a diretiva do angular bind-src -->
+<!-- <img [src]="img"> -->
+
+<!-- Event Binding -->
+
+<!-- <button (click)="handleClick()">Click Me</button> -->
+
+
+<!-- Two Way Data Binding Manual -->
+
+<!-- <p>
+  {{ nome }}
+</p> -->
+
+<!-- <input type="text" [value]="nome" (input)="nome = $event.target.value" /> -->
+
+<!-- Podemos acessar o elemento dando um nome, usar #nome 
+
+  <input type="text" [value]="nome" (input)="nome = meuNome.value" #meuNome />
+
+-->
+
+ <!-- Usando o NGMODEL -->
+
+ <!-- <input type="text" [(ngModel)]="nome"  /> -->
+
+ <!-- Escrita maior -->
+
+ <!-- <input type="text" [ngModel]="nome" (ngModelChange)="nome = $event"/> -->
+
+ <!-- Class Binding -->
+
+ <!-- <select (change)="0" #minhaClasse>
+    <option value="1">Classe 1</option>
+    <option value="2">Classe 2</option>
+    <option value="3">Classe 3</option>
+ </select>
+
+ <div 
+ [class.classe1]="minhaClasse.value == 1"
+ [class.classe2]="minhaClasse.value == 2"
+ [class.classe3]="minhaClasse.value == 3"
+ [class.classeMaior1]="minhaClasse.value > 1"
+ >Minha Classe</div> -->
+
+ <!-- Style Binding -->
+
+ <!-- <div 
+  [style.display]="minhaClasse.value == 1 ? 'none' : 'block'"
+ >Minha Classe</div> -->
+
+ <!-- <hr>
+ <h2>Array de Alunos</h2>
+ <ul>
+   <li *ngFor="let aluno of alunos">{{ aluno.nome }}</li>
+ </ul> -->
+
+ <p>Busca na API do GITHUB</p>
+ <input type="text" [(ngModel)]="searchText" (keyup.enter)="getProjects()">
+
+ <ul>
+   <li *ngFor="let project of projects">Name: {{ project.full_name }} - {{ project.language }} <a href="{{project.clone_url}}" target="_blank">Link</a></li>
+ </ul>
